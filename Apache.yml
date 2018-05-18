@@ -1,0 +1,14 @@
+-
+ name: Deploy a WebServer with root privilege
+ hosts: localhost
+ tasks:
+   -
+    name: Install a Apache Package with Sudo privilege
+    yum:
+      name: httpd
+      state: latest
+   -
+     name: Install mod_ssl modules
+     yum:
+       name: mod_ssl
+       state: latest
